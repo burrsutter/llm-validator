@@ -15,11 +15,11 @@ def test_response_quality():
     print(f"Response: {response}")
     
     similarity = similarity_metric(response, expected_response)
-    print(similarity)
+    print(f"Similarity score: {similarity}")
 
     if similarity <= 0.8:
         raise Exception("Output is not similar enough to expected output")
-        
+    
     print("Response Quality OK")
 
     with open("quality_result.json", "w") as f:
