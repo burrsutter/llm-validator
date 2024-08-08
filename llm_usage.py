@@ -5,7 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain.evaluation import load_evaluator
 from langchain.embeddings import HuggingFaceEmbeddings
 
-INFERENCE_SERVER_URL = "http://llm.ic-shared-llm.svc.cluster.local:8000"
+INFERENCE_SERVER_URL = "https://parasol-instruct-claimsbot-ai.apps.cluster-jxp8q.sandbox1291.opentlc.com"
 MAX_NEW_TOKENS = 512
 TOP_P = 0.95
 TEMPERATURE = 0.01
