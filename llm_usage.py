@@ -5,7 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain.evaluation import load_evaluator
 from langchain.embeddings import HuggingFaceEmbeddings
 
-INFERENCE_SERVER_URL = "http://llm.ic-shared-llm.svc.cluster.local:8000"
+INFERENCE_SERVER_URL = "https://parasol-instruct-claimsbot-ai.apps.cluster-jxp8q.sandbox9999.opentlc.com"
 MAX_NEW_TOKENS = 512
 TOP_P = 0.95
 TEMPERATURE = 0.01
@@ -15,7 +15,7 @@ def infer_with_template(input_text, template):
     llm = VLLMOpenAI(
         openai_api_key="EMPTY",
         openai_api_base= f"{INFERENCE_SERVER_URL}/v1",
-        model_name="mistralai/Mistral-7B-Instruct-v0.2",
+        model_name="parasol-instruct",
         max_tokens=MAX_NEW_TOKENS,
         top_p=TOP_P,
         temperature=TEMPERATURE,
